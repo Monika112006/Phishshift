@@ -1,0 +1,1441 @@
+{
+  "checkpoint": "CP-2",
+  "description": "Audit near-duplicate removal across splits (FR-01)",
+  "input_total_records": 605,
+  "retained_records": 446,
+  "removed_duplicates_count": 159,
+  "similarity_threshold": 0.94,
+  "duplicate_log": [
+    {
+      "duplicate_message_id": "MSG-01133",
+      "retained_message_id": "MSG-01138",
+      "campaign_group": "phish_sms_package_delivery",
+      "channel": "sms",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01132",
+      "retained_message_id": "MSG-01138",
+      "campaign_group": "phish_sms_package_delivery",
+      "channel": "sms",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01455",
+      "retained_message_id": "MSG-01434",
+      "campaign_group": "legit_mfa_push_notifications",
+      "channel": "sms",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01492",
+      "retained_message_id": "MSG-01515",
+      "campaign_group": "legit_engineering_alerts",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01457",
+      "retained_message_id": "MSG-01428",
+      "campaign_group": "legit_mfa_push_notifications",
+      "channel": "sms",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01287",
+      "retained_message_id": "MSG-01281",
+      "campaign_group": "phish_unfamiliar_supply_chain_phish",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01295",
+      "retained_message_id": "MSG-01303",
+      "campaign_group": "phish_unfamiliar_supply_chain_phish",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01403",
+      "retained_message_id": "MSG-01407",
+      "campaign_group": "legit_payroll_hr_notices",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01464",
+      "retained_message_id": "MSG-01428",
+      "campaign_group": "legit_mfa_push_notifications",
+      "channel": "sms",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01437",
+      "retained_message_id": "MSG-01451",
+      "campaign_group": "legit_mfa_push_notifications",
+      "channel": "sms",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01485",
+      "retained_message_id": "MSG-01475",
+      "campaign_group": "legit_engineering_alerts",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01101",
+      "retained_message_id": "MSG-01117",
+      "campaign_group": "phish_sms_package_delivery",
+      "channel": "sms",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01456",
+      "retained_message_id": "MSG-01428",
+      "campaign_group": "legit_mfa_push_notifications",
+      "channel": "sms",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01131",
+      "retained_message_id": "MSG-01108",
+      "campaign_group": "phish_sms_package_delivery",
+      "channel": "sms",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01188",
+      "retained_message_id": "MSG-01189",
+      "campaign_group": "phish_fake_payroll_update",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01438",
+      "retained_message_id": "MSG-01428",
+      "campaign_group": "legit_mfa_push_notifications",
+      "channel": "sms",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01440",
+      "retained_message_id": "MSG-01427",
+      "campaign_group": "legit_mfa_push_notifications",
+      "channel": "sms",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01452",
+      "retained_message_id": "MSG-01434",
+      "campaign_group": "legit_mfa_push_notifications",
+      "channel": "sms",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01061",
+      "retained_message_id": "MSG-01093",
+      "campaign_group": "phish_executive_wire_fraud",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01194",
+      "retained_message_id": "MSG-01202",
+      "campaign_group": "phish_cloud_storage_share",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01352",
+      "retained_message_id": "MSG-01317",
+      "campaign_group": "legit_urgent_password_reset",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01461",
+      "retained_message_id": "MSG-01428",
+      "campaign_group": "legit_mfa_push_notifications",
+      "channel": "sms",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01111",
+      "retained_message_id": "MSG-01108",
+      "campaign_group": "phish_sms_package_delivery",
+      "channel": "sms",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01508",
+      "retained_message_id": "MSG-01500",
+      "campaign_group": "legit_engineering_alerts",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01514",
+      "retained_message_id": "MSG-01484",
+      "campaign_group": "legit_engineering_alerts",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01453",
+      "retained_message_id": "MSG-01434",
+      "campaign_group": "legit_mfa_push_notifications",
+      "channel": "sms",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01319",
+      "retained_message_id": "MSG-01316",
+      "campaign_group": "legit_urgent_password_reset",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01114",
+      "retained_message_id": "MSG-01120",
+      "campaign_group": "phish_sms_package_delivery",
+      "channel": "sms",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01443",
+      "retained_message_id": "MSG-01434",
+      "campaign_group": "legit_mfa_push_notifications",
+      "channel": "sms",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01396",
+      "retained_message_id": "MSG-01392",
+      "campaign_group": "legit_payroll_hr_notices",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01540",
+      "retained_message_id": "MSG-01523",
+      "campaign_group": "legit_daily_team_collaboration",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01088",
+      "retained_message_id": "MSG-01069",
+      "campaign_group": "phish_executive_wire_fraud",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01054",
+      "retained_message_id": "MSG-01022",
+      "campaign_group": "phish_credential_expire_classic",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01442",
+      "retained_message_id": "MSG-01428",
+      "campaign_group": "legit_mfa_push_notifications",
+      "channel": "sms",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01142",
+      "retained_message_id": "MSG-01139",
+      "campaign_group": "phish_sms_package_delivery",
+      "channel": "sms",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01171",
+      "retained_message_id": "MSG-01169",
+      "campaign_group": "phish_fake_payroll_update",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01140",
+      "retained_message_id": "MSG-01138",
+      "campaign_group": "phish_sms_package_delivery",
+      "channel": "sms",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01478",
+      "retained_message_id": "MSG-01477",
+      "campaign_group": "legit_engineering_alerts",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01429",
+      "retained_message_id": "MSG-01451",
+      "campaign_group": "legit_mfa_push_notifications",
+      "channel": "sms",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01413",
+      "retained_message_id": "MSG-01404",
+      "campaign_group": "legit_payroll_hr_notices",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01005",
+      "retained_message_id": "MSG-01022",
+      "campaign_group": "phish_credential_expire_classic",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01038",
+      "retained_message_id": "MSG-01018",
+      "campaign_group": "phish_credential_expire_classic",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01531",
+      "retained_message_id": "MSG-01523",
+      "campaign_group": "legit_daily_team_collaboration",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01579",
+      "retained_message_id": "MSG-01562",
+      "campaign_group": "legit_holdout_executive_announcements",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01300",
+      "retained_message_id": "MSG-01298",
+      "campaign_group": "phish_unfamiliar_supply_chain_phish",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01121",
+      "retained_message_id": "MSG-01130",
+      "campaign_group": "phish_sms_package_delivery",
+      "channel": "sms",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01444",
+      "retained_message_id": "MSG-01459",
+      "campaign_group": "legit_mfa_push_notifications",
+      "channel": "sms",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01161",
+      "retained_message_id": "MSG-01150",
+      "campaign_group": "phish_fake_payroll_update",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01346",
+      "retained_message_id": "MSG-01365",
+      "campaign_group": "legit_urgent_password_reset",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01278",
+      "retained_message_id": "MSG-01281",
+      "campaign_group": "phish_unfamiliar_supply_chain_phish",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01112",
+      "retained_message_id": "MSG-01144",
+      "campaign_group": "phish_sms_package_delivery",
+      "channel": "sms",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01152",
+      "retained_message_id": "MSG-01189",
+      "campaign_group": "phish_fake_payroll_update",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01340",
+      "retained_message_id": "MSG-01367",
+      "campaign_group": "legit_urgent_password_reset",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01250",
+      "retained_message_id": "MSG-01246",
+      "campaign_group": "phish_novel_mfa_session_bypass",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01549",
+      "retained_message_id": "MSG-01542",
+      "campaign_group": "legit_daily_team_collaboration",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01469",
+      "retained_message_id": "MSG-01427",
+      "campaign_group": "legit_mfa_push_notifications",
+      "channel": "sms",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01435",
+      "retained_message_id": "MSG-01450",
+      "campaign_group": "legit_mfa_push_notifications",
+      "channel": "sms",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01468",
+      "retained_message_id": "MSG-01427",
+      "campaign_group": "legit_mfa_push_notifications",
+      "channel": "sms",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01206",
+      "retained_message_id": "MSG-01202",
+      "campaign_group": "phish_cloud_storage_share",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01247",
+      "retained_message_id": "MSG-01236",
+      "campaign_group": "phish_novel_mfa_session_bypass",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01467",
+      "retained_message_id": "MSG-01427",
+      "campaign_group": "legit_mfa_push_notifications",
+      "channel": "sms",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01416",
+      "retained_message_id": "MSG-01381",
+      "campaign_group": "legit_payroll_hr_notices",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01237",
+      "retained_message_id": "MSG-01238",
+      "campaign_group": "phish_novel_mfa_session_bypass",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01557",
+      "retained_message_id": "MSG-01546",
+      "campaign_group": "legit_daily_team_collaboration",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01563",
+      "retained_message_id": "MSG-01573",
+      "campaign_group": "legit_holdout_executive_announcements",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01448",
+      "retained_message_id": "MSG-01427",
+      "campaign_group": "legit_mfa_push_notifications",
+      "channel": "sms",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01051",
+      "retained_message_id": "MSG-01022",
+      "campaign_group": "phish_credential_expire_classic",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01331",
+      "retained_message_id": "MSG-01357",
+      "campaign_group": "legit_urgent_password_reset",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01574",
+      "retained_message_id": "MSG-01573",
+      "campaign_group": "legit_holdout_executive_announcements",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01528",
+      "retained_message_id": "MSG-01523",
+      "campaign_group": "legit_daily_team_collaboration",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01182",
+      "retained_message_id": "MSG-01148",
+      "campaign_group": "phish_fake_payroll_update",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01050",
+      "retained_message_id": "MSG-01024",
+      "campaign_group": "phish_credential_expire_classic",
+      "channel": "email",
+      "similarity_score": 0.9431,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01098",
+      "retained_message_id": "MSG-01094",
+      "campaign_group": "phish_executive_wire_fraud",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01125",
+      "retained_message_id": "MSG-01108",
+      "campaign_group": "phish_sms_package_delivery",
+      "channel": "sms",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01526",
+      "retained_message_id": "MSG-01537",
+      "campaign_group": "legit_daily_team_collaboration",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01110",
+      "retained_message_id": "MSG-01130",
+      "campaign_group": "phish_sms_package_delivery",
+      "channel": "sms",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01122",
+      "retained_message_id": "MSG-01130",
+      "campaign_group": "phish_sms_package_delivery",
+      "channel": "sms",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01383",
+      "retained_message_id": "MSG-01421",
+      "campaign_group": "legit_payroll_hr_notices",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01488",
+      "retained_message_id": "MSG-01477",
+      "campaign_group": "legit_engineering_alerts",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01174",
+      "retained_message_id": "MSG-01163",
+      "campaign_group": "phish_fake_payroll_update",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01116",
+      "retained_message_id": "MSG-01139",
+      "campaign_group": "phish_sms_package_delivery",
+      "channel": "sms",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01466",
+      "retained_message_id": "MSG-01459",
+      "campaign_group": "legit_mfa_push_notifications",
+      "channel": "sms",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01533",
+      "retained_message_id": "MSG-01551",
+      "campaign_group": "legit_daily_team_collaboration",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01576",
+      "retained_message_id": "MSG-01584",
+      "campaign_group": "legit_holdout_executive_announcements",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01103",
+      "retained_message_id": "MSG-01108",
+      "campaign_group": "phish_sms_package_delivery",
+      "channel": "sms",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01354",
+      "retained_message_id": "MSG-01332",
+      "campaign_group": "legit_urgent_password_reset",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01458",
+      "retained_message_id": "MSG-01428",
+      "campaign_group": "legit_mfa_push_notifications",
+      "channel": "sms",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01497",
+      "retained_message_id": "MSG-01506",
+      "campaign_group": "legit_engineering_alerts",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01490",
+      "retained_message_id": "MSG-01475",
+      "campaign_group": "legit_engineering_alerts",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01085",
+      "retained_message_id": "MSG-01063",
+      "campaign_group": "phish_executive_wire_fraud",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01564",
+      "retained_message_id": "MSG-01603",
+      "campaign_group": "legit_holdout_executive_announcements",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01418",
+      "retained_message_id": "MSG-01398",
+      "campaign_group": "legit_payroll_hr_notices",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01124",
+      "retained_message_id": "MSG-01141",
+      "campaign_group": "phish_sms_package_delivery",
+      "channel": "sms",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01123",
+      "retained_message_id": "MSG-01107",
+      "campaign_group": "phish_sms_package_delivery",
+      "channel": "sms",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01426",
+      "retained_message_id": "MSG-01427",
+      "campaign_group": "legit_mfa_push_notifications",
+      "channel": "sms",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01473",
+      "retained_message_id": "MSG-01475",
+      "campaign_group": "legit_engineering_alerts",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01399",
+      "retained_message_id": "MSG-01417",
+      "campaign_group": "legit_payroll_hr_notices",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01535",
+      "retained_message_id": "MSG-01529",
+      "campaign_group": "legit_daily_team_collaboration",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01462",
+      "retained_message_id": "MSG-01428",
+      "campaign_group": "legit_mfa_push_notifications",
+      "channel": "sms",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01192",
+      "retained_message_id": "MSG-01202",
+      "campaign_group": "phish_cloud_storage_share",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01502",
+      "retained_message_id": "MSG-01482",
+      "campaign_group": "legit_engineering_alerts",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01102",
+      "retained_message_id": "MSG-01127",
+      "campaign_group": "phish_sms_package_delivery",
+      "channel": "sms",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01312",
+      "retained_message_id": "MSG-01293",
+      "campaign_group": "phish_unfamiliar_supply_chain_phish",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01583",
+      "retained_message_id": "MSG-01605",
+      "campaign_group": "legit_holdout_executive_announcements",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01328",
+      "retained_message_id": "MSG-01363",
+      "campaign_group": "legit_urgent_password_reset",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01431",
+      "retained_message_id": "MSG-01463",
+      "campaign_group": "legit_mfa_push_notifications",
+      "channel": "sms",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01321",
+      "retained_message_id": "MSG-01357",
+      "campaign_group": "legit_urgent_password_reset",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01446",
+      "retained_message_id": "MSG-01427",
+      "campaign_group": "legit_mfa_push_notifications",
+      "channel": "sms",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01055",
+      "retained_message_id": "MSG-01052",
+      "campaign_group": "phish_credential_expire_classic",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01092",
+      "retained_message_id": "MSG-01094",
+      "campaign_group": "phish_executive_wire_fraud",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01449",
+      "retained_message_id": "MSG-01427",
+      "campaign_group": "legit_mfa_push_notifications",
+      "channel": "sms",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01151",
+      "retained_message_id": "MSG-01185",
+      "campaign_group": "phish_fake_payroll_update",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01532",
+      "retained_message_id": "MSG-01546",
+      "campaign_group": "legit_daily_team_collaboration",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01329",
+      "retained_message_id": "MSG-01363",
+      "campaign_group": "legit_urgent_password_reset",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01137",
+      "retained_message_id": "MSG-01145",
+      "campaign_group": "phish_sms_package_delivery",
+      "channel": "sms",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01527",
+      "retained_message_id": "MSG-01543",
+      "campaign_group": "legit_daily_team_collaboration",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01454",
+      "retained_message_id": "MSG-01450",
+      "campaign_group": "legit_mfa_push_notifications",
+      "channel": "sms",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01498",
+      "retained_message_id": "MSG-01506",
+      "campaign_group": "legit_engineering_alerts",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01129",
+      "retained_message_id": "MSG-01107",
+      "campaign_group": "phish_sms_package_delivery",
+      "channel": "sms",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01198",
+      "retained_message_id": "MSG-01195",
+      "campaign_group": "phish_cloud_storage_share",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01530",
+      "retained_message_id": "MSG-01543",
+      "campaign_group": "legit_daily_team_collaboration",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01306",
+      "retained_message_id": "MSG-01286",
+      "campaign_group": "phish_unfamiliar_supply_chain_phish",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01441",
+      "retained_message_id": "MSG-01427",
+      "campaign_group": "legit_mfa_push_notifications",
+      "channel": "sms",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01387",
+      "retained_message_id": "MSG-01420",
+      "campaign_group": "legit_payroll_hr_notices",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01556",
+      "retained_message_id": "MSG-01545",
+      "campaign_group": "legit_daily_team_collaboration",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01261",
+      "retained_message_id": "MSG-01257",
+      "campaign_group": "phish_novel_mfa_session_bypass",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01071",
+      "retained_message_id": "MSG-01065",
+      "campaign_group": "phish_executive_wire_fraud",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01113",
+      "retained_message_id": "MSG-01144",
+      "campaign_group": "phish_sms_package_delivery",
+      "channel": "sms",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01439",
+      "retained_message_id": "MSG-01434",
+      "campaign_group": "legit_mfa_push_notifications",
+      "channel": "sms",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01270",
+      "retained_message_id": "MSG-01245",
+      "campaign_group": "phish_novel_mfa_session_bypass",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01600",
+      "retained_message_id": "MSG-01562",
+      "campaign_group": "legit_holdout_executive_announcements",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01470",
+      "retained_message_id": "MSG-01427",
+      "campaign_group": "legit_mfa_push_notifications",
+      "channel": "sms",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01512",
+      "retained_message_id": "MSG-01506",
+      "campaign_group": "legit_engineering_alerts",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01323",
+      "retained_message_id": "MSG-01367",
+      "campaign_group": "legit_urgent_password_reset",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01324",
+      "retained_message_id": "MSG-01344",
+      "campaign_group": "legit_urgent_password_reset",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01058",
+      "retained_message_id": "MSG-01068",
+      "campaign_group": "phish_executive_wire_fraud",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01333",
+      "retained_message_id": "MSG-01361",
+      "campaign_group": "legit_urgent_password_reset",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01168",
+      "retained_message_id": "MSG-01175",
+      "campaign_group": "phish_fake_payroll_update",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01602",
+      "retained_message_id": "MSG-01566",
+      "campaign_group": "legit_holdout_executive_announcements",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01215",
+      "retained_message_id": "MSG-01205",
+      "campaign_group": "phish_cloud_storage_share",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01374",
+      "retained_message_id": "MSG-01419",
+      "campaign_group": "legit_payroll_hr_notices",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01465",
+      "retained_message_id": "MSG-01463",
+      "campaign_group": "legit_mfa_push_notifications",
+      "channel": "sms",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01104",
+      "retained_message_id": "MSG-01126",
+      "campaign_group": "phish_sms_package_delivery",
+      "channel": "sms",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01371",
+      "retained_message_id": "MSG-01382",
+      "campaign_group": "legit_payroll_hr_notices",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01301",
+      "retained_message_id": "MSG-01308",
+      "campaign_group": "phish_unfamiliar_supply_chain_phish",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01388",
+      "retained_message_id": "MSG-01417",
+      "campaign_group": "legit_payroll_hr_notices",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01128",
+      "retained_message_id": "MSG-01134",
+      "campaign_group": "phish_sms_package_delivery",
+      "channel": "sms",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01368",
+      "retained_message_id": "MSG-01365",
+      "campaign_group": "legit_urgent_password_reset",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01460",
+      "retained_message_id": "MSG-01428",
+      "campaign_group": "legit_mfa_push_notifications",
+      "channel": "sms",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01430",
+      "retained_message_id": "MSG-01434",
+      "campaign_group": "legit_mfa_push_notifications",
+      "channel": "sms",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01028",
+      "retained_message_id": "MSG-01037",
+      "campaign_group": "phish_credential_expire_classic",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01518",
+      "retained_message_id": "MSG-01550",
+      "campaign_group": "legit_daily_team_collaboration",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01031",
+      "retained_message_id": "MSG-01042",
+      "campaign_group": "phish_credential_expire_classic",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01033",
+      "retained_message_id": "MSG-01021",
+      "campaign_group": "phish_credential_expire_classic",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01433",
+      "retained_message_id": "MSG-01459",
+      "campaign_group": "legit_mfa_push_notifications",
+      "channel": "sms",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01559",
+      "retained_message_id": "MSG-01547",
+      "campaign_group": "legit_daily_team_collaboration",
+      "channel": "email",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01105",
+      "retained_message_id": "MSG-01126",
+      "campaign_group": "phish_sms_package_delivery",
+      "channel": "sms",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01143",
+      "retained_message_id": "MSG-01141",
+      "campaign_group": "phish_sms_package_delivery",
+      "channel": "sms",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    },
+    {
+      "duplicate_message_id": "MSG-01115",
+      "retained_message_id": "MSG-01126",
+      "campaign_group": "phish_sms_package_delivery",
+      "channel": "sms",
+      "similarity_score": 1.0,
+      "threshold": 0.94,
+      "reason": "Near-identical template matched existing training/holdout record"
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "dataset_name": "PhishShift Message Risk Benchmark Corpus",
+  "total_records": 605,
+  "license": "Creative Commons Attribution 4.0 International (CC BY 4.0) & Educational Research License",
+  "version": "1.0.0",
+  "created_date": "2026-10-27",
+  "provenance": {
+    "sources": [
+      "Locally authored benign enterprise communications (IT, HR, DevOps, Admin)",
+      "Simulated synthetic phishing campaign variants inspired by ENISA and CISA threat advisories",
+      "Controlled perturbation benchmarks for robustness analysis"
+    ],
+    "inert_url_guarantee": "All URLs converted to defanged format (hxxp / [.]) - strictly inert per NFR-01",
+    "pii_compliance": "No real credentials, mailboxes, or user PII included per NFR-02"
+  },
+  "campaign_summary": {
+    "legit_holdout_executive_announcements": {
+      "label": "legitimate",
+      "channel": "email",
+      "is_holdout": true,
+      "count": 45
+    },
+    "legit_payroll_hr_notices": {
+      "label": "legitimate",
+      "channel": "email",
+      "is_holdout": false,
+      "count": 55
+    },
+    "legit_engineering_alerts": {
+      "label": "legitimate",
+      "channel": "email",
+      "is_holdout": false,
+      "count": 45
+    },
+    "phish_unfamiliar_supply_chain_phish": {
+      "label": "phishing",
+      "channel": "email",
+      "is_holdout": true,
+      "count": 40
+    },
+    "legit_mfa_push_notifications": {
+      "label": "legitimate",
+      "channel": "sms",
+      "is_holdout": false,
+      "count": 45
+    },
+    "phish_novel_mfa_session_bypass": {
+      "label": "phishing",
+      "channel": "email",
+      "is_holdout": true,
+      "count": 45
+    },
+    "phish_sms_package_delivery": {
+      "label": "phishing",
+      "channel": "sms",
+      "is_holdout": false,
+      "count": 45
+    },
+    "phish_executive_wire_fraud": {
+      "label": "phishing",
+      "channel": "email",
+      "is_holdout": false,
+      "count": 45
+    },
+    "legit_urgent_password_reset": {
+      "label": "legitimate",
+      "channel": "email",
+      "is_holdout": false,
+      "count": 55
+    },
+    "legit_daily_team_collaboration": {
+      "label": "legitimate",
+      "channel": "email",
+      "is_holdout": false,
+      "count": 45
+    },
+    "phish_fake_payroll_update": {
+      "label": "phishing",
+      "channel": "email",
+      "is_holdout": false,
+      "count": 45
+    },
+    "phish_cloud_storage_share": {
+      "label": "phishing",
+      "channel": "email",
+      "is_holdout": false,
+      "count": 40
+    },
+    "phish_credential_expire_classic": {
+      "label": "phishing",
+      "channel": "email",
+      "is_holdout": false,
+      "count": 55
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "checkpoint": "CP-3",
+  "requirement": "FR-03: Campaign-separated holdout",
+  "total_records_processed": 446,
+  "split_counts": {
+    "train": 268,
+    "val_in_distribution": 68,
+    "holdout_out_of_distribution": 110
+  },
+  "campaign_distribution": {
+    "train_campaigns": [
+      "legit_daily_team_collaboration",
+      "legit_engineering_alerts",
+      "legit_mfa_push_notifications",
+      "legit_payroll_hr_notices",
+      "legit_urgent_password_reset",
+      "phish_cloud_storage_share",
+      "phish_credential_expire_classic",
+      "phish_executive_wire_fraud",
+      "phish_fake_payroll_update",
+      "phish_sms_package_delivery"
+    ],
+    "val_campaigns": [
+      "legit_daily_team_collaboration",
+      "legit_engineering_alerts",
+      "legit_mfa_push_notifications",
+      "legit_payroll_hr_notices",
+      "legit_urgent_password_reset",
+      "phish_cloud_storage_share",
+      "phish_credential_expire_classic",
+      "phish_executive_wire_fraud",
+      "phish_fake_payroll_update",
+      "phish_sms_package_delivery"
+    ],
+    "holdout_campaigns": [
+      "legit_holdout_executive_announcements",
+      "phish_novel_mfa_session_bypass",
+      "phish_unfamiliar_supply_chain_phish"
+    ]
+  },
+  "zero_leakage_verified": true,
+  "leaked_campaigns": []
+}

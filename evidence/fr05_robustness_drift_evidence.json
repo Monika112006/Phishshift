@@ -1,0 +1,153 @@
+{
+  "fr05_legitimate_urgent_false_positive_analysis": {
+    "total_legitimate_urgent_messages_tested": 106,
+    "keyword_triggers_in_subset": [
+      "urgent",
+      "password",
+      "reset",
+      "payroll",
+      "action required",
+      "w-2",
+      "deposit",
+      "deadline",
+      "immediate"
+    ],
+    "models_false_positive_analysis": {
+      "Rule-Based Heuristics": {
+        "false_positives": 0,
+        "fpr": 0.0,
+        "insight": "High FPR because rule heuristics trigger blindly on urgency & password keywords regardless of legitimate corporate origin."
+      },
+      "TF-IDF + Logistic Regression": {
+        "false_positives": 0,
+        "fpr": 0.0,
+        "insight": "Low FPR due to learned internal corporate domain tokens offsetting urgency keywords."
+      },
+      "Multi-Modal Random Forest": {
+        "false_positives": 0,
+        "fpr": 0.0,
+        "insight": "Low FPR due to non-linear combination of internal sender validation and inert URL features."
+      }
+    }
+  },
+  "cp5_controlled_perturbations_robustness_drift": {
+    "checkpoint": "CP-5",
+    "description": "Present 8 new harmless simulated messages with controlled text perturbations (FR-05)",
+    "messages_tested": [
+      {
+        "id": "PERTURB-01",
+        "perturbation_type": "Original Baseline",
+        "subject": "Scheduled maintenance tonight on core cluster",
+        "channel": "email",
+        "tfidf_risk_score": 0.1835,
+        "tfidf_verdict": "legitimate",
+        "ensemble_risk_score": 0.0557,
+        "ensemble_verdict": "legitimate"
+      },
+      {
+        "id": "PERTURB-02",
+        "perturbation_type": "Punctuation & Caps Urgency Injection (!!!)",
+        "subject": "URGENT!!! Scheduled maintenance tonight on core cluster!!!",
+        "channel": "email",
+        "tfidf_risk_score": 0.2057,
+        "tfidf_verdict": "legitimate",
+        "ensemble_risk_score": 0.0343,
+        "ensemble_verdict": "legitimate"
+      },
+      {
+        "id": "PERTURB-03",
+        "perturbation_type": "Original Baseline",
+        "subject": "Quarterly expense report submission reminder",
+        "channel": "email",
+        "tfidf_risk_score": 0.2098,
+        "tfidf_verdict": "legitimate",
+        "ensemble_risk_score": 0.0381,
+        "ensemble_verdict": "legitimate"
+      },
+      {
+        "id": "PERTURB-04",
+        "perturbation_type": "High Urgency Cue Perturbation",
+        "subject": "CRITICAL ACTION REQUIRED: Quarterly expense report submission",
+        "channel": "email",
+        "tfidf_risk_score": 0.3167,
+        "tfidf_verdict": "legitimate",
+        "ensemble_risk_score": 0.0275,
+        "ensemble_verdict": "legitimate"
+      },
+      {
+        "id": "PERTURB-05",
+        "perturbation_type": "Standard URL syntax",
+        "subject": "IT Helpdesk: Ticket #8841 closed successfully",
+        "channel": "email",
+        "tfidf_risk_score": 0.2933,
+        "tfidf_verdict": "legitimate",
+        "ensemble_risk_score": 0.2064,
+        "ensemble_verdict": "legitimate"
+      },
+      {
+        "id": "PERTURB-06",
+        "perturbation_type": "Defanged URL Syntax (hxxps, [.])",
+        "subject": "IT Helpdesk: Ticket #8841 closed successfully",
+        "channel": "email",
+        "tfidf_risk_score": 0.2482,
+        "tfidf_verdict": "legitimate",
+        "ensemble_risk_score": 0.093,
+        "ensemble_verdict": "legitimate"
+      },
+      {
+        "id": "PERTURB-07",
+        "perturbation_type": "SMS Standard Baseline",
+        "subject": "Your Duo Security passcode is 492019",
+        "channel": "sms",
+        "tfidf_risk_score": 0.2925,
+        "tfidf_verdict": "legitimate",
+        "ensemble_risk_score": 0.1789,
+        "ensemble_verdict": "legitimate"
+      },
+      {
+        "id": "PERTURB-08",
+        "perturbation_type": "SMS Pressure & Short Expiry Perturbation",
+        "subject": "Your Duo Security passcode is 492019",
+        "channel": "sms",
+        "tfidf_risk_score": 0.2657,
+        "tfidf_verdict": "legitimate",
+        "ensemble_risk_score": 0.1789,
+        "ensemble_verdict": "legitimate"
+      }
+    ],
+    "pairwise_shift_analysis": [
+      {
+        "base_case": "PERTURB-01",
+        "perturbed_case": "PERTURB-02",
+        "perturbation_description": "Punctuation & Caps Urgency Injection (!!!)",
+        "tfidf_probability_shift": 0.0222,
+        "ensemble_probability_shift": -0.0214,
+        "verdict_flip": false
+      },
+      {
+        "base_case": "PERTURB-03",
+        "perturbed_case": "PERTURB-04",
+        "perturbation_description": "High Urgency Cue Perturbation",
+        "tfidf_probability_shift": 0.1069,
+        "ensemble_probability_shift": -0.0106,
+        "verdict_flip": false
+      },
+      {
+        "base_case": "PERTURB-05",
+        "perturbed_case": "PERTURB-06",
+        "perturbation_description": "Defanged URL Syntax (hxxps, [.])",
+        "tfidf_probability_shift": -0.0451,
+        "ensemble_probability_shift": -0.1134,
+        "verdict_flip": false
+      },
+      {
+        "base_case": "PERTURB-07",
+        "perturbed_case": "PERTURB-08",
+        "perturbation_description": "SMS Pressure & Short Expiry Perturbation",
+        "tfidf_probability_shift": -0.0268,
+        "ensemble_probability_shift": 0.0,
+        "verdict_flip": false
+      }
+    ]
+  }
+}

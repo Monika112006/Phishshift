@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" style="background:#0f172a; font-family:sans-serif;">
+  <text x="360" y="28" fill="#f8fafc" font-size="15" font-weight="bold" text-anchor="middle">Figure 2: Campaign Groups &amp; Zero-Leakage Holdout Separation (FR-03)</text>
+  <text x="360" y="46" fill="#94a3b8" font-size="11.5" text-anchor="middle">Blue = Training Campaigns | Orange = Strictly Unseen Holdout Campaigns</text>
+
+  <text x="260" y="86" fill="#cbd5e1" font-size="11" text-anchor="end">holdout_executive_announcements (email)</text>
+  <rect x="270" y="74" width="225" height="15" fill="#f59e0b" rx="3"/>
+  <text x="503" y="86" fill="#f8fafc" font-size="10.5" font-weight="bold">45</text>
+  <text x="260" y="111" fill="#cbd5e1" font-size="11" text-anchor="end">payroll_hr_notices (email)</text>
+  <rect x="270" y="99" width="275" height="15" fill="#38bdf8" rx="3"/>
+  <text x="553" y="111" fill="#f8fafc" font-size="10.5" font-weight="bold">55</text>
+  <text x="260" y="136" fill="#cbd5e1" font-size="11" text-anchor="end">engineering_alerts (email)</text>
+  <rect x="270" y="124" width="225" height="15" fill="#38bdf8" rx="3"/>
+  <text x="503" y="136" fill="#f8fafc" font-size="10.5" font-weight="bold">45</text>
+  <text x="260" y="161" fill="#cbd5e1" font-size="11" text-anchor="end">unfamiliar_supply_chain_phish (email)</text>
+  <rect x="270" y="149" width="200" height="15" fill="#f59e0b" rx="3"/>
+  <text x="478" y="161" fill="#f8fafc" font-size="10.5" font-weight="bold">40</text>
+  <text x="260" y="186" fill="#cbd5e1" font-size="11" text-anchor="end">mfa_push_notifications (sms)</text>
+  <rect x="270" y="174" width="225" height="15" fill="#38bdf8" rx="3"/>
+  <text x="503" y="186" fill="#f8fafc" font-size="10.5" font-weight="bold">45</text>
+  <text x="260" y="211" fill="#cbd5e1" font-size="11" text-anchor="end">novel_mfa_session_bypass (email)</text>
+  <rect x="270" y="199" width="225" height="15" fill="#f59e0b" rx="3"/>
+  <text x="503" y="211" fill="#f8fafc" font-size="10.5" font-weight="bold">45</text>
+  <text x="260" y="236" fill="#cbd5e1" font-size="11" text-anchor="end">sms_package_delivery (sms)</text>
+  <rect x="270" y="224" width="225" height="15" fill="#38bdf8" rx="3"/>
+  <text x="503" y="236" fill="#f8fafc" font-size="10.5" font-weight="bold">45</text>
+  <text x="260" y="261" fill="#cbd5e1" font-size="11" text-anchor="end">executive_wire_fraud (email)</text>
+  <rect x="270" y="249" width="225" height="15" fill="#38bdf8" rx="3"/>
+  <text x="503" y="261" fill="#f8fafc" font-size="10.5" font-weight="bold">45</text>
+  <text x="260" y="286" fill="#cbd5e1" font-size="11" text-anchor="end">urgent_password_reset (email)</text>
+  <rect x="270" y="274" width="275" height="15" fill="#38bdf8" rx="3"/>
+  <text x="553" y="286" fill="#f8fafc" font-size="10.5" font-weight="bold">55</text>
+  <text x="260" y="311" fill="#cbd5e1" font-size="11" text-anchor="end">daily_team_collaboration (email)</text>
+  <rect x="270" y="299" width="225" height="15" fill="#38bdf8" rx="3"/>
+  <text x="503" y="311" fill="#f8fafc" font-size="10.5" font-weight="bold">45</text>
+  <text x="260" y="336" fill="#cbd5e1" font-size="11" text-anchor="end">fake_payroll_update (email)</text>
+  <rect x="270" y="324" width="225" height="15" fill="#38bdf8" rx="3"/>
+  <text x="503" y="336" fill="#f8fafc" font-size="10.5" font-weight="bold">45</text>
+  <text x="260" y="361" fill="#cbd5e1" font-size="11" text-anchor="end">cloud_storage_share (email)</text>
+  <rect x="270" y="349" width="200" height="15" fill="#38bdf8" rx="3"/>
+  <text x="478" y="361" fill="#f8fafc" font-size="10.5" font-weight="bold">40</text>
+  <text x="260" y="386" fill="#cbd5e1" font-size="11" text-anchor="end">credential_expire_classic (email)</text>
+  <rect x="270" y="374" width="275" height="15" fill="#38bdf8" rx="3"/>
+  <text x="553" y="386" fill="#f8fafc" font-size="10.5" font-weight="bold">55</text>
+</svg>

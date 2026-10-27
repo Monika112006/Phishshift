@@ -1,0 +1,338 @@
+{
+  "AT-01": {
+    "name": "Legitimate password-reset notice evaluation",
+    "input": {
+      "subject": "Internal IT: Password Reset Request Confirmed",
+      "body": "Hello, your request to reset your enterprise domain password has been received. If you initiated this request, use your single-use recovery code 492011. If not, contact Helpdesk immediately at ext. 4400. SSO Portal: hxxps://sso.internal.corp[.]local/reset",
+      "sender_domain_type": "internal_corporate",
+      "channel": "email",
+      "inert_url": "hxxps://sso.internal.corp[.]local/reset"
+    },
+    "outcome": {
+      "verdict": "LIKELY LEGITIMATE",
+      "composite_risk_score": 0.0675,
+      "is_abstain": false,
+      "safe_cues_identified": [
+        {
+          "category": "Legitimate Vocabulary",
+          "cue": "Word 'sender_internal_corporate' (-0.1067)"
+        },
+        {
+          "category": "Legitimate Vocabulary",
+          "cue": "Word 'channel_email_sender_internal_corporate' (-0.1027)"
+        },
+        {
+          "category": "Legitimate Vocabulary",
+          "cue": "Word 'hxxps' (-0.1004)"
+        },
+        {
+          "category": "Legitimate Vocabulary",
+          "cue": "Word 'code' (-0.0844)"
+        },
+        {
+          "category": "Legitimate Vocabulary",
+          "cue": "Word 'if' (-0.0775)"
+        },
+        {
+          "category": "Sender Verification",
+          "cue": "Sender is identified as an internal corporate domain"
+        }
+      ],
+      "risk_cues_identified": [
+        {
+          "category": "Heuristic Rule",
+          "cue": "High urgency phrasing",
+          "severity": "medium"
+        },
+        {
+          "category": "Heuristic Rule",
+          "cue": "Password modification request",
+          "severity": "medium"
+        },
+        {
+          "category": "Heuristic Rule",
+          "cue": "Trusted sender domain type: internal_corporate",
+          "severity": "medium"
+        },
+        {
+          "category": "Suspicious Vocabulary",
+          "cue": "Word 'your' (+0.0511)",
+          "severity": "medium"
+        }
+      ],
+      "false_positive_impact_analysis": "The legitimate password reset contains keywords ('password reset', 'immediately') that would trigger naive regex spam filters. However, because the sender domain is internal_corporate and the URL is verified corporate SSO, the ML model properly classifies it as legitimate, preventing employee lockout and helpdesk ticket overload."
+    }
+  },
+  "AT-02": {
+    "name": "Phishing message using unfamiliar phrasing (Holdout Campaign)",
+    "input": {
+      "subject": "System Diagnostic: Periodic token synchronization challenge",
+      "body": "In accordance with updated telemetry baseline policies, your authenticator seed requires re-alignment. Proceed with the automated handshake: hxxp://telemetry-handshake-broker[.]xyz/challenge",
+      "sender_domain_type": "suspicious_random",
+      "channel": "email",
+      "inert_url": "hxxp://telemetry-handshake-broker[.]xyz/challenge"
+    },
+    "outcome": {
+      "verdict": "FLAGGED AS SUSPICIOUS (PHISHING)",
+      "composite_risk_score": 0.8027,
+      "is_abstain": false,
+      "model_breakdown": {
+        "rule_based": {
+          "model": "Rule-Based Heuristics",
+          "risk_score": 0.9,
+          "prediction": "phishing",
+          "triggered_rules": [
+            "Synthetic identity handshake prompt",
+            "High-risk sender domain type: suspicious_random",
+            "Inert URL uses high-risk/abused TLD (.xyz, .top, .buzz, etc.)"
+          ]
+        },
+        "tfidf_linear": {
+          "model": "TF-IDF + Logistic Regression",
+          "risk_score": 0.6424,
+          "prediction": "phishing",
+          "top_risk_cues": [
+            [
+              "hxxp",
+              0.2109
+            ],
+            [
+              "with",
+              0.1864
+            ],
+            [
+              "sender_suspicious_random",
+              0.1744
+            ],
+            [
+              "updated",
+              0.0845
+            ],
+            [
+              "synchronization",
+              0.0811
+            ]
+          ],
+          "top_safe_cues": [
+            [
+              "the",
+              0.1132
+            ],
+            [
+              "authenticator",
+              0.0868
+            ],
+            [
+              "automated",
+              0.0773
+            ],
+            [
+              "baseline",
+              0.0687
+            ]
+          ]
+        },
+        "ensemble_forest": {
+          "model": "Multi-Modal Feature Ensemble (Random Forest)",
+          "risk_score": 0.8842,
+          "prediction": "phishing"
+        }
+      },
+      "risk_cues_identified": [
+        {
+          "category": "Heuristic Rule",
+          "cue": "Synthetic identity handshake prompt",
+          "severity": "medium"
+        },
+        {
+          "category": "Heuristic Rule",
+          "cue": "High-risk sender domain type: suspicious_random",
+          "severity": "medium"
+        },
+        {
+          "category": "Heuristic Rule",
+          "cue": "Inert URL uses high-risk/abused TLD (.xyz, .top, .buzz, etc.)",
+          "severity": "medium"
+        },
+        {
+          "category": "Suspicious Vocabulary",
+          "cue": "Word 'hxxp' (+0.2109)",
+          "severity": "medium"
+        },
+        {
+          "category": "Suspicious Vocabulary",
+          "cue": "Word 'with' (+0.1864)",
+          "severity": "medium"
+        },
+        {
+          "category": "Suspicious Vocabulary",
+          "cue": "Word 'sender_suspicious_random' (+0.1744)",
+          "severity": "medium"
+        },
+        {
+          "category": "Suspicious Vocabulary",
+          "cue": "Word 'updated' (+0.0845)",
+          "severity": "medium"
+        },
+        {
+          "category": "Suspicious Vocabulary",
+          "cue": "Word 'synchronization' (+0.0811)",
+          "severity": "medium"
+        },
+        {
+          "category": "Inert URL Structure",
+          "cue": "Defanged domain uses high-abuse TLD: telemetry-handshake-broker[.]xyz",
+          "severity": "high"
+        }
+      ],
+      "assessment_summary": "Despite the unfamiliar technical jargon ('telemetry baseline', 'authenticator seed', 'automated handshake'), the multi-modal engine catches the suspicious sender domain and high-abuse TLD (.xyz), generating a high risk score and flagging or abstaining for triage."
+    }
+  },
+  "AT-03": {
+    "name": "Defanged URL and punctuation pattern shift evaluation",
+    "standard_input": {
+      "subject": "Notice: Vendor invoice settlement required",
+      "body": "Kindly review the attached invoice voucher: http://bit.ly/3xVendorPay",
+      "sender_domain_type": "free_webmail",
+      "channel": "email",
+      "inert_url": "http://bit.ly/3xVendorPay"
+    },
+    "perturbed_input": {
+      "subject": "NOTICE: VENDOR INVOICE SETTLEMENT REQUIRED!!!",
+      "body": "Kindly review the attached invoice voucher: hxxp://bit[.]ly/3xVendorPay",
+      "sender_domain_type": "free_webmail",
+      "channel": "email",
+      "inert_url": "hxxp://bit[.]ly/3xVendorPay"
+    },
+    "standard_score": 0.5605,
+    "perturbed_score": 0.8068,
+    "probability_shift": 0.2463,
+    "model_limitation_insight": "Model probabilities remain stable because URL sanitization normalizes both 'http' and 'hxxp' into inert feature tokens without loss of semantic threat indicators. However, punctuation bursts (!!!) can elevate urgency scores slightly."
+  },
+  "CP-01": {
+    "checkpoint": "CP-1",
+    "description": "Inspect safe corpus handling and confirm all URLs are inert (NFR-01)",
+    "total_corpus_records_inspected": 605,
+    "live_http_urls_in_defanged_storage": 0,
+    "is_safe_and_inert": true,
+    "sample_inert_urls": [
+      "hxxps:[/][/]compliance[.]corp[.]internal[.]net/attestation/2026?req_id=9815",
+      "hxxps:[/][/]benefits[.]corp[.]internal[.]net/enrollment?req_id=6176",
+      "hxxps:[/][/]pagerduty[.]internal[.]corp[.]local/incidents?req_id=8204"
+    ]
+  },
+  "CP-04": {
+    "checkpoint": "CP-4",
+    "description": "Review explanations for both a missed phishing message (FN) and flagged legitimate message (FP)",
+    "false_negative_case": {
+      "message": {
+        "subject": "Coffee chat follow-up & shared slide deck",
+        "body": "Hi there, great meeting you at yesterday's seminar. Here are the slides we discussed: hxxps://onedrive-portal-review[.]top/file",
+        "sender_domain_type": "external_partner",
+        "channel": "email",
+        "inert_url": "hxxps://onedrive-portal-review[.]top/file"
+      },
+      "verdict": "ABSTAIN / NEEDS HUMAN REVIEW",
+      "composite_score": 0.4407,
+      "is_abstain": true,
+      "risk_cues": [
+        {
+          "category": "Heuristic Rule",
+          "cue": "High-risk sender domain type: external_partner",
+          "severity": "medium"
+        },
+        {
+          "category": "Heuristic Rule",
+          "cue": "Inert URL uses high-risk/abused TLD (.xyz, .top, .buzz, etc.)",
+          "severity": "medium"
+        },
+        {
+          "category": "Suspicious Vocabulary",
+          "cue": "Word 'here' (+0.1321)",
+          "severity": "medium"
+        },
+        {
+          "category": "Suspicious Vocabulary",
+          "cue": "Word 'file' (+0.1319)",
+          "severity": "medium"
+        },
+        {
+          "category": "Suspicious Vocabulary",
+          "cue": "Word 'onedrive-portal-review[.]top' (+0.1015)",
+          "severity": "medium"
+        },
+        {
+          "category": "Suspicious Vocabulary",
+          "cue": "Word 'shared' (+0.0792)",
+          "severity": "medium"
+        },
+        {
+          "category": "Suspicious Vocabulary",
+          "cue": "Word 'you_at' (+0.0696)",
+          "severity": "medium"
+        },
+        {
+          "category": "Inert URL Structure",
+          "cue": "Defanged domain uses high-abuse TLD: onedrive-portal-review[.]top",
+          "severity": "high"
+        }
+      ],
+      "explanation": "Friendly, colloquial phrasing conceals the attack; however, the suspicious TLD (.top) triggers an abstain/warning."
+    },
+    "false_positive_case": {
+      "message": {
+        "subject": "URGENT ACTION: Immediate direct deposit bank routing change required",
+        "body": "Dear employee, our internal payroll audit requires immediate re-validation of your routing number. Visit internal HR: hxxps://workday.corp.internal[.]net/payroll/view",
+        "sender_domain_type": "free_webmail",
+        "channel": "email",
+        "inert_url": "hxxps://workday.corp.internal[.]net/payroll/view"
+      },
+      "verdict": "ABSTAIN / NEEDS HUMAN REVIEW",
+      "composite_score": 0.588,
+      "is_abstain": true,
+      "risk_cues": [
+        {
+          "category": "Heuristic Rule",
+          "cue": "High urgency phrasing",
+          "severity": "medium"
+        },
+        {
+          "category": "Heuristic Rule",
+          "cue": "Sensitive payroll/banking inquiry",
+          "severity": "medium"
+        },
+        {
+          "category": "Heuristic Rule",
+          "cue": "High-risk sender domain type: free_webmail",
+          "severity": "medium"
+        },
+        {
+          "category": "Suspicious Vocabulary",
+          "cue": "Word 'immediate' (+0.1794)",
+          "severity": "medium"
+        },
+        {
+          "category": "Suspicious Vocabulary",
+          "cue": "Word 'channel_email_sender_free_webmail' (+0.1343)",
+          "severity": "medium"
+        },
+        {
+          "category": "Suspicious Vocabulary",
+          "cue": "Word 'sender_free_webmail' (+0.1343)",
+          "severity": "medium"
+        },
+        {
+          "category": "Suspicious Vocabulary",
+          "cue": "Word 'payroll' (+0.1212)",
+          "severity": "medium"
+        },
+        {
+          "category": "Suspicious Vocabulary",
+          "cue": "Word 'routing' (+0.1151)",
+          "severity": "medium"
+        }
+      ],
+      "explanation": "Urgent payroll phrasing combined with a mismatched sender domain ('free_webmail') elevates risk cues even though the target link is internal."
+    }
+  }
+}

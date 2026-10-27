@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PhishShift | Email &amp; SMS Risk Classification Console</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <!-- Clean Light Top Bar -->
+  <header class="top-navbar">
+    <div class="brand-wrapper">
+      <div class="brand-icon-shield">🛡️</div>
+      <div class="brand-text">
+        <h1>PhishShift Risk Scanner</h1>
+        <div class="brand-tag">Project Code: ML-07 • Multi-Channel Email &amp; SMS Triage</div>
+      </div>
+    </div>
+    <div class="nfr-pill">
+      ⚠️ Decision Support Active (NFR-03: Not a Safety Guarantee)
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="triage-grid">
+      <!-- Left Panel: Input & Channel Classification -->
+      <section class="card">
+        <div class="card-header">
+          <div class="card-title">Message Intake &amp; Channel Classification</div>
+          <span style="font-size: 11px; font-weight: 700; color: var(--primary-blue);" id="active-mode-label">EMAIL MODE</span>
+        </div>
+        <div class="card-body">
+          <!-- Channel Switcher (Email vs SMS) -->
+          <div class="channel-switch-container">
+            <button type="button" id="tab-email" class="channel-btn active" onclick="switchChannel('email')">
+              <span>✉️</span> Email Classification
+            </button>
+            <button type="button" id="tab-sms" class="channel-btn" onclick="switchChannel('sms')">
+              <span>💬</span> SMS Classification
+            </button>
+          </div>
+
+          <!-- Channel-Specific Presets -->
+          <div class="presets-section">
+            <div class="presets-heading">Quick Test Incidents:</div>
+            <div id="email-presets" class="preset-pills">
+              <button type="button" class="btn-sample" onclick="loadSample('email_wire')">✉️ Exec Wire Transfer (Phish)</button>
+              <button type="button" class="btn-sample" onclick="loadSample('email_reset')">✉️ IT SSO Reset (Legit)</button>
+              <button type="button" class="btn-sample" onclick="loadSample('email_novel')">✉️ Novel Phishing (Holdout)</button>
+              <button type="button" class="btn-sample" onclick="loadSample('email_abstain')">✉️ Borderline (Abstain)</button>
+            </div>
+            <div id="sms-presets" class="preset-pills" style="display: none;">
+              <button type="button" class="btn-sample" onclick="loadSample('sms_package')">💬 Package Fee Scam (Smish)</button>
+              <button type="button" class="btn-sample" onclick="loadSample('sms_duo')">💬 Duo 2FA Verification (Legit)</button>
+              <button type="button" class="btn-sample" onclick="loadSample('sms_bank')">💬 Urgent Bank Alert (Smish)</button>
+            </div>
+          </div>
+
+          <!-- Input Form -->
+          <form id="triage-form" onsubmit="handleTriageSubmit(event)">
+            <!-- Email Subject (Shown only in Email mode) -->
+            <div class="form-group" id="group-subject">
+              <label for="input-subject">Email Subject Line</label>
+              <input type="text" id="input-subject" placeholder="e.g. Critical: Account Verification Required">
+            </div>
+
+            <div class="form-row">
+              <div id="group-sender">
+                <label for="input-sender">Sender Category</label>
+                <select id="input-sender">
+                  <option value="internal_corporate">Corporate Internal (Trusted Domain)</option>
+                  <option value="free_webmail">Free Webmail (Gmail, Yahoo)</option>
+                  <option value="spoofed_lookalike">Spoofed / Typosquat Domain</option>
+                  <option value="suspicious_random">Random / Unfamiliar Origin</option>
+                  <option value="external_partner">External Partner</option>
+                </select>
+              </div>
+              <div>
+                <label for="input-url">Embedded Link (Inert / Defanged)</label>
+                <input type="text" id="input-url" placeholder="e.g. hxxp://usps-track[.]xyz/pay">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="input-body" id="label-body">Email Body Content</label>
+              <textarea id="input-body" placeholder="Paste or type simulated message text here..." required></textarea>
+            </div>
+
+            <button type="submit" id="btn-submit" class="btn-submit">Classify &amp; Scan Message Risk</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- Right Panel: Triage Results & Evidence -->
+      <section class="card">
+        <div class="card-header">
+          <div class="card-title">Triage Telemetry &amp; Evidence</div>
+          <span id="telemetry-badge" style="font-size: 11px; font-weight: 700; color: var(--text-dim);">AWAITING INPUT</span>
+        </div>
+        <div class="card-body">
+          <div id="results-placeholder" class="placeholder-wrap">
+            <div class="placeholder-icon">📬</div>
+            <p>Select a preset incident above or paste content to run multi-model risk classification.</p>
+          </div>
+
+          <div id="results-container" style="display: none;">
+            <!-- Channel Classification Pill -->
+            <div class="channel-meta-badge" id="channel-result-pill">
+              <span>✉️</span> CHANNEL: EMAIL
+            </div>
+
+            <!-- Verdict Card -->
+            <div id="verdict-card" class="triage-verdict-card danger">
+              <div>
+                <div id="verdict-title" class="verdict-main">FLAGGED AS PHISHING</div>
+                <div id="verdict-subtitle" class="verdict-meta">High threat probability detected</div>
+              </div>
+              <div class="score-display-box">
+                <div id="score-val" class="score-big">88%</div>
+                <div class="score-caption">Risk Score</div>
+              </div>
+            </div>
+
+            <!-- Abstain / Escalation Callout (FR-04) -->
+            <div id="abstain-box" class="escalate-callout" style="display: none;">
+              <strong>⚠️ Triage Abstain Triggered (FR-04):</strong>
+              <div id="abstain-text" style="margin-top: 4px;"></div>
+            </div>
+
+            <!-- Indicators of Compromise & Safe Cues -->
+            <div class="evidence-section">
+              <div class="section-label-light">Observed Indicators &amp; Explanations (FR-04):</div>
+              <div id="evidence-items"></div>
+            </div>
+
+            <!-- Multi-Engine Consensus (FR-02) -->
+            <div class="consensus-card">
+              <div class="section-label-light">Multi-Engine Consensus Scores (FR-02):</div>
+              <div class="consensus-grid">
+                <div class="model-pill-box">
+                  <div class="model-pill-name">Rule Heuristics</div>
+                  <div class="model-pill-score" id="score-rules">0.00</div>
+                </div>
+                <div class="model-pill-box">
+                  <div class="model-pill-name">TF-IDF Linear</div>
+                  <div class="model-pill-score" id="score-tfidf">0.00</div>
+                </div>
+                <div class="model-pill-box">
+                  <div class="model-pill-name">Random Forest</div>
+                  <div class="model-pill-score" id="score-rf">0.00</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Benchmark Verification Details -->
+            <details>
+              <summary>📊 System Verification &amp; Holdout Benchmark (FR-03)</summary>
+              <table class="metrics-table">
+                <thead>
+                  <tr>
+                    <th>Architecture</th>
+                    <th>In-Dist Validation</th>
+                    <th>Holdout (Unseen)</th>
+                    <th>Benign FPR (FR-05)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Rule Engine</td>
+                    <td>83.8% Acc</td>
+                    <td style="color: #e11d48; font-weight: bold;">46.8% (Decay)</td>
+                    <td>0.0%</td>
+                  </tr>
+                  <tr>
+                    <td>TF-IDF Linear</td>
+                    <td>100.0% Acc</td>
+                    <td style="color: #059669; font-weight: bold;">100.0%</td>
+                    <td>0.0%</td>
+                  </tr>
+                  <tr>
+                    <td>Random Forest</td>
+                    <td>100.0% Acc</td>
+                    <td style="color: #059669; font-weight: bold;">100.0%</td>
+                    <td>0.0%</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div style="font-size: 11px; color: var(--text-dim); margin-top: 8px;">
+                Verified on AT-01 (Password Reset Impact), AT-02 (Holdout Phrasing), AT-03 (Perturbations), CP-1 to CP-5.
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer>
+      PhishShift Message Risk Scanner • ML-07 Student Mini Project • Standard Edition
+    </footer>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

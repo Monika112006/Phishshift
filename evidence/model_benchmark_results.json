@@ -1,0 +1,112 @@
+{
+  "timestamp": "2026-10-27 12:10:53",
+  "dataset_split": {
+    "train_size": 268,
+    "val_size": 68,
+    "holdout_size": 110
+  },
+  "models": {
+    "Rule-Based Heuristics": {
+      "training_time_sec": 0.0,
+      "inference_latency_ms": 0.05,
+      "validation_in_distribution": {
+        "accuracy": 0.8824,
+        "precision": 1.0,
+        "recall": 0.6522,
+        "f1_score": 0.7895,
+        "roc_auc": 1.0,
+        "fpr": 0.0,
+        "fnr": 0.3478,
+        "confusion_matrix": {
+          "true_negative": 45,
+          "false_positive": 0,
+          "false_negative": 8,
+          "true_positive": 15
+        }
+      },
+      "holdout_out_of_distribution": {
+        "accuracy": 0.4727,
+        "precision": 1.0,
+        "recall": 0.2055,
+        "f1_score": 0.3409,
+        "roc_auc": 1.0,
+        "fpr": 0.0,
+        "fnr": 0.7945,
+        "confusion_matrix": {
+          "true_negative": 37,
+          "false_positive": 0,
+          "false_negative": 58,
+          "true_positive": 15
+        }
+      }
+    },
+    "TF-IDF + Logistic Regression": {
+      "training_time_sec": 0.2931,
+      "inference_latency_ms": 0.2,
+      "validation_in_distribution": {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "roc_auc": 1.0,
+        "fpr": 0.0,
+        "fnr": 0.0,
+        "confusion_matrix": {
+          "true_negative": 45,
+          "false_positive": 0,
+          "false_negative": 0,
+          "true_positive": 23
+        }
+      },
+      "holdout_out_of_distribution": {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "roc_auc": 1.0,
+        "fpr": 0.0,
+        "fnr": 0.0,
+        "confusion_matrix": {
+          "true_negative": 37,
+          "false_positive": 0,
+          "false_negative": 0,
+          "true_positive": 73
+        }
+      }
+    },
+    "Multi-Modal Random Forest": {
+      "training_time_sec": 0.5028,
+      "inference_latency_ms": 0.1,
+      "validation_in_distribution": {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "roc_auc": 1.0,
+        "fpr": 0.0,
+        "fnr": 0.0,
+        "confusion_matrix": {
+          "true_negative": 45,
+          "false_positive": 0,
+          "false_negative": 0,
+          "true_positive": 23
+        }
+      },
+      "holdout_out_of_distribution": {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "roc_auc": 1.0,
+        "fpr": 0.0,
+        "fnr": 0.0,
+        "confusion_matrix": {
+          "true_negative": 37,
+          "false_positive": 0,
+          "false_negative": 0,
+          "true_positive": 73
+        }
+      }
+    }
+  }
+}

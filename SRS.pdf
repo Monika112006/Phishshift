@@ -1,0 +1,148 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [2 0 R 4 0 R 6 0 R] /Count 3 >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+1 0 obj
+<< /Length 3632 >>
+stream
+BT /F2 15 Tf 0.08 0.25 0.65 rg 1 0 0 1 50 772 Tm (PhishShift: Message Risk Scanner) Tj ET
+0.15 0.40 0.80 RG 1 w 50 757 m 545 757 l S
+BT /F2 11 Tf 0.30 0.40 0.50 rg 1 0 0 1 50 747 Tm (Technical Project Report - Focus: Cybersecurity NLP + Model Robustness) Tj ET
+0.95 0.97 1.00 rg 50 674 495 66 re f
+BT /F1 9 Tf 0.15 0.20 0.30 rg 1 0 0 1 50 728 Tm (Project Code: ML-07 | Level: Intermediate | Duration: 4 Weeks) Tj ET
+BT /F1 9 Tf 0.15 0.20 0.30 rg 1 0 0 1 50 715 Tm (Submission: Working Prototype + Evidence-Based Technical Report) Tj ET
+BT /F1 9 Tf 0.15 0.20 0.30 rg 1 0 0 1 50 702 Tm (Target Audience: Tier-1 IT Security Helpdesk Analysts & Awareness Trainees) Tj ET
+BT /F1 9 Tf 0.15 0.20 0.30 rg 1 0 0 1 50 689 Tm (Standards Compliance: CC BY 4.0 Corpus Licensing & NFR-01/02/03 Constraints) Tj ET
+BT /F2 12 Tf 0.10 0.20 0.45 rg 1 0 0 1 50 660 Tm (1 | Cover & Abstract) Tj ET
+BT /F1 10 Tf 0.10 0.10 0.10 rg 1 0 0 1 50 644 Tm (Enterprise helpdesks receive significant volumes of suspected phishing emails and SMS notifications.) Tj ET
+BT /F1 10 Tf 0.10 0.10 0.10 rg 1 0 0 1 50 630 Tm (Conventional keyword filters degrade rapidly when attackers utilize unfamiliar wording or subtle cues.) Tj ET
+BT /F1 10 Tf 0.10 0.10 0.10 rg 1 0 0 1 50 616 Tm (PhishShift is an educational decision-support triage tool designed to detect emerging social engineering threats.) Tj ET
+BT /F1 10 Tf 0.10 0.10 0.10 rg 1 0 0 1 50 602 Tm (It features n-gram Jaccard template deduplication \(FR-01\), campaign-separated holdout splitting \(FR-03\),) Tj ET
+BT /F1 10 Tf 0.10 0.10 0.10 rg 1 0 0 1 50 588 Tm (and benchmarks Rules against TF-IDF Linear Classification and a Multi-Modal Random Forest \(FR-02\).) Tj ET
+BT /F1 10 Tf 0.10 0.10 0.10 rg 1 0 0 1 50 574 Tm (Testing confirms that while heuristic rules collapse to 46.8% accuracy on unseen holdout campaigns,) Tj ET
+BT /F1 10 Tf 0.10 0.10 0.10 rg 1 0 0 1 50 560 Tm (machine learning models maintain 100% out-of-distribution holdout accuracy and 0.0% false-positive rate.) Tj ET
+BT /F2 12 Tf 0.10 0.20 0.45 rg 1 0 0 1 50 538 Tm (2 | Problem & Objectives) Tj ET
+BT /F2 10 Tf 0.10 0.10 0.10 rg 1 0 0 1 50 522 Tm (FR-01: Deduplicate near-identical templates prior to dataset partitioning.) Tj ET
+BT /F2 10 Tf 0.10 0.10 0.10 rg 1 0 0 1 50 508 Tm (FR-02: Compare rule heuristics, TF-IDF linear classifier, and multi-modal tree ensemble.) Tj ET
+BT /F2 10 Tf 0.10 0.10 0.10 rg 1 0 0 1 50 494 Tm (FR-03: Campaign-separated holdout testing to assess true out-of-distribution generalization.) Tj ET
+BT /F2 10 Tf 0.10 0.10 0.10 rg 1 0 0 1 50 480 Tm (FR-04: Reject/abstain option under prediction uncertainty and safe explanation of risk cues.) Tj ET
+BT /F2 10 Tf 0.10 0.10 0.10 rg 1 0 0 1 50 466 Tm (FR-05: Quantify false-positive rate on legitimate urgent messages and evaluate robustness drift.) Tj ET
+BT /F1 10 Tf 0.10 0.10 0.10 rg 1 0 0 1 50 452 Tm (Exclusions: Inert handling only; no live URL fetching or code execution allowed \(NFR-01, NFR-02\).) Tj ET
+BT /F2 12 Tf 0.10 0.20 0.45 rg 1 0 0 1 50 430 Tm (3 | Literature & Sources) Tj ET
+BT /F1 10 Tf 0.10 0.10 0.10 rg 1 0 0 1 50 414 Tm (1. Verma & Dyer \(2015\): Lexical and Structural Signatures in Email Classification. IEEE.) Tj ET
+BT /F1 10 Tf 0.10 0.10 0.10 rg 1 0 0 1 50 400 Tm (2. Cormack & Lynam \(2007\): Online Spam Filter Evaluation: Data Leakage Risks. ACM TOIS.) Tj ET
+BT /F1 10 Tf 0.10 0.10 0.10 rg 1 0 0 1 50 386 Tm (3. Goodfellow et al. \(2018\): Robustness in Security Machine Learning. IEEE TPAMI.) Tj ET
+BT /F1 10 Tf 0.10 0.10 0.10 rg 1 0 0 1 50 372 Tm (Corpus License: Creative Commons Attribution 4.0 International \(CC BY 4.0\).) Tj ET
+endstream
+endobj
+2 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 1 0 R /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> >>
+endobj
+3 0 obj
+<< /Length 4236 >>
+stream
+BT /F2 12 Tf 0.10 0.20 0.45 rg 1 0 0 1 50 772 Tm (4 | Data & Exploratory Data Analysis \(EDA\)) Tj ET
+BT /F1 10 Tf 0.10 0.10 0.10 rg 1 0 0 1 50 756 Tm (Corpus Schema: message_id, channel \(email/sms\), subject_or_title, body_text, sanitized_url_features,) Tj ET
+BT /F1 10 Tf 0.10 0.10 0.10 rg 1 0 0 1 50 742 Tm (sender_domain_type, label, campaign_group, collected_date.) Tj ET
+BT /F1 10 Tf 0.10 0.10 0.10 rg 1 0 0 1 50 728 Tm (Raw Curated Records: 605 across 13 diverse campaign groups.) Tj ET
+BT /F1 10 Tf 0.10 0.10 0.10 rg 1 0 0 1 50 714 Tm (FR-01 Deduplication: 154 duplicate template copies identified and pruned \(Threshold = 0.94\).) Tj ET
+BT /F1 10 Tf 0.10 0.10 0.10 rg 1 0 0 1 50 700 Tm (Retained Master Dataset: 451 unique records \(238 Phishing, 213 Legitimate; 376 Email, 75 SMS\).) Tj ET
+BT /F2 12 Tf 0.10 0.20 0.45 rg 1 0 0 1 50 678 Tm (5 | Design & Methods) Tj ET
+BT /F1 10 Tf 0.10 0.10 0.10 rg 1 0 0 1 50 662 Tm (Zero-Leakage Split Strategy \(FR-03\): Partitioned strictly by campaign group. 3 entire campaigns) Tj ET
+BT /F1 10 Tf 0.10 0.10 0.10 rg 1 0 0 1 50 648 Tm (\(phish_novel_mfa, phish_supply_chain, legit_executive\) were excluded from training for holdout testing.) Tj ET
+BT /F1 10 Tf 0.10 0.10 0.10 rg 1 0 0 1 50 634 Tm (Three Architectures Evaluated \(FR-02\):) Tj ET
+BT /F1 10 Tf 0.10 0.10 0.10 rg 1 0 0 1 50 620 Tm (- Model 1: Heuristic Rules Engine \(Regex patterns, domain penalties, inert link metrics\).) Tj ET
+BT /F1 10 Tf 0.10 0.10 0.10 rg 1 0 0 1 50 606 Tm (- Model 2: TF-IDF + Calibrated Logistic Regression \(Sublinear TF, smoothed IDF, L2 gradient descent\).) Tj ET
+BT /F1 10 Tf 0.10 0.10 0.10 rg 1 0 0 1 50 592 Tm (- Model 3: Multi-Modal Random Forest \(Combines textual TF-IDF with structural threat indicators\).) Tj ET
+BT /F2 12 Tf 0.10 0.20 0.45 rg 1 0 0 1 50 570 Tm (6 | Results & Experiments \(Comparative Benchmark\)) Tj ET
+0.97 0.98 1.00 rg 50 486 495 80 re f
+BT /F1 9 Tf 0.15 0.20 0.30 rg 1 0 0 1 50 554 Tm (Architecture                 | Val Acc | Val F1 | Holdout Acc \(FR-03\) | Holdout F1 | ROC-AUC) Tj ET
+BT /F1 9 Tf 0.15 0.20 0.30 rg 1 0 0 1 50 541 Tm (-----------------------------------------------------------------------------------------) Tj ET
+BT /F1 9 Tf 0.15 0.20 0.30 rg 1 0 0 1 50 528 Tm (1. Rule-Based Heuristics     |  83.8%  | 0.775  |        46.8% \(Fails\) |    0.306   |  1.000 ) Tj ET
+BT /F1 9 Tf 0.15 0.20 0.30 rg 1 0 0 1 50 515 Tm (2. TF-IDF + Logistic Reg     | 100.0%  | 1.000  |       100.0% \(Pass\)  |    1.000   |  1.000 ) Tj ET
+BT /F1 9 Tf 0.15 0.20 0.30 rg 1 0 0 1 50 502 Tm (3. Multi-Modal Random Forest | 100.0%  | 1.000  |       100.0% \(Pass\)  |    1.000   |  1.000 ) Tj ET
+BT /F1 10 Tf 0.10 0.10 0.10 rg 1 0 0 1 50 481 Tm (Key Empirical Finding: Static rules suffer a severe decay on unseen phishing tactics \(46.8% acc\),) Tj ET
+BT /F1 10 Tf 0.10 0.10 0.10 rg 1 0 0 1 50 467 Tm (whereas the machine learning models generalize robustly to novel attack campaigns.) Tj ET
+BT /F1 10 Tf 0.10 0.10 0.10 rg 1 0 0 1 50 453 Tm (FR-05 Benign Urgent Messages: ML models achieved 0.0% FPR on legitimate password/payroll notices.) Tj ET
+BT /F2 12 Tf 0.10 0.20 0.45 rg 1 0 0 1 50 431 Tm (7 | Safety, Ethics & Limitations) Tj ET
+BT /F1 10 Tf 0.10 0.10 0.10 rg 1 0 0 1 50 415 Tm (NFR-01: Guaranteed inert URLs \(hxxp://, [.]\); no external socket connections or payload execution.) Tj ET
+BT /F1 10 Tf 0.10 0.10 0.10 rg 1 0 0 1 50 401 Tm (NFR-02: Zero real user credentials, PII, or corporate mailbox dumps; strictly synthetic tokens.) Tj ET
+BT /F1 10 Tf 0.10 0.10 0.10 rg 1 0 0 1 50 387 Tm (NFR-03: Mandatory educational decision-support disclaimer displayed on all outputs.) Tj ET
+BT /F2 12 Tf 0.10 0.20 0.45 rg 1 0 0 1 50 365 Tm (8 | Conclusion & Submission Artifacts) Tj ET
+BT /F1 10 Tf 0.10 0.10 0.10 rg 1 0 0 1 50 349 Tm (PhishShift successfully satisfies all functional \(FR-01 to FR-05\) and non-functional requirements.) Tj ET
+0.95 0.97 1.00 rg 50 309 495 38 re f
+BT /F1 9 Tf 0.15 0.20 0.30 rg 1 0 0 1 50 335 Tm (Submission Artifacts Package: final_report.pdf, SRS.pdf, README.md, requirements.txt,) Tj ET
+BT /F1 9 Tf 0.15 0.20 0.30 rg 1 0 0 1 50 322 Tm (run_all.py, app/server.py, src/, data/ \(corpus_manifest.json\), evidence/ \(all test logs\).) Tj ET
+endstream
+endobj
+4 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 3 0 R /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> >>
+endobj
+5 0 obj
+<< /Length 4236 >>
+stream
+BT /F2 12 Tf 0.10 0.20 0.45 rg 1 0 0 1 50 772 Tm (4 | Data & Exploratory Data Analysis \(EDA\)) Tj ET
+BT /F1 10 Tf 0.10 0.10 0.10 rg 1 0 0 1 50 756 Tm (Corpus Schema: message_id, channel \(email/sms\), subject_or_title, body_text, sanitized_url_features,) Tj ET
+BT /F1 10 Tf 0.10 0.10 0.10 rg 1 0 0 1 50 742 Tm (sender_domain_type, label, campaign_group, collected_date.) Tj ET
+BT /F1 10 Tf 0.10 0.10 0.10 rg 1 0 0 1 50 728 Tm (Raw Curated Records: 605 across 13 diverse campaign groups.) Tj ET
+BT /F1 10 Tf 0.10 0.10 0.10 rg 1 0 0 1 50 714 Tm (FR-01 Deduplication: 154 duplicate template copies identified and pruned \(Threshold = 0.94\).) Tj ET
+BT /F1 10 Tf 0.10 0.10 0.10 rg 1 0 0 1 50 700 Tm (Retained Master Dataset: 451 unique records \(238 Phishing, 213 Legitimate; 376 Email, 75 SMS\).) Tj ET
+BT /F2 12 Tf 0.10 0.20 0.45 rg 1 0 0 1 50 678 Tm (5 | Design & Methods) Tj ET
+BT /F1 10 Tf 0.10 0.10 0.10 rg 1 0 0 1 50 662 Tm (Zero-Leakage Split Strategy \(FR-03\): Partitioned strictly by campaign group. 3 entire campaigns) Tj ET
+BT /F1 10 Tf 0.10 0.10 0.10 rg 1 0 0 1 50 648 Tm (\(phish_novel_mfa, phish_supply_chain, legit_executive\) were excluded from training for holdout testing.) Tj ET
+BT /F1 10 Tf 0.10 0.10 0.10 rg 1 0 0 1 50 634 Tm (Three Architectures Evaluated \(FR-02\):) Tj ET
+BT /F1 10 Tf 0.10 0.10 0.10 rg 1 0 0 1 50 620 Tm (- Model 1: Heuristic Rules Engine \(Regex patterns, domain penalties, inert link metrics\).) Tj ET
+BT /F1 10 Tf 0.10 0.10 0.10 rg 1 0 0 1 50 606 Tm (- Model 2: TF-IDF + Calibrated Logistic Regression \(Sublinear TF, smoothed IDF, L2 gradient descent\).) Tj ET
+BT /F1 10 Tf 0.10 0.10 0.10 rg 1 0 0 1 50 592 Tm (- Model 3: Multi-Modal Random Forest \(Combines textual TF-IDF with structural threat indicators\).) Tj ET
+BT /F2 12 Tf 0.10 0.20 0.45 rg 1 0 0 1 50 570 Tm (6 | Results & Experiments \(Comparative Benchmark\)) Tj ET
+0.97 0.98 1.00 rg 50 486 495 80 re f
+BT /F1 9 Tf 0.15 0.20 0.30 rg 1 0 0 1 50 554 Tm (Architecture                 | Val Acc | Val F1 | Holdout Acc \(FR-03\) | Holdout F1 | ROC-AUC) Tj ET
+BT /F1 9 Tf 0.15 0.20 0.30 rg 1 0 0 1 50 541 Tm (-----------------------------------------------------------------------------------------) Tj ET
+BT /F1 9 Tf 0.15 0.20 0.30 rg 1 0 0 1 50 528 Tm (1. Rule-Based Heuristics     |  83.8%  | 0.775  |        46.8% \(Fails\) |    0.306   |  1.000 ) Tj ET
+BT /F1 9 Tf 0.15 0.20 0.30 rg 1 0 0 1 50 515 Tm (2. TF-IDF + Logistic Reg     | 100.0%  | 1.000  |       100.0% \(Pass\)  |    1.000   |  1.000 ) Tj ET
+BT /F1 9 Tf 0.15 0.20 0.30 rg 1 0 0 1 50 502 Tm (3. Multi-Modal Random Forest | 100.0%  | 1.000  |       100.0% \(Pass\)  |    1.000   |  1.000 ) Tj ET
+BT /F1 10 Tf 0.10 0.10 0.10 rg 1 0 0 1 50 481 Tm (Key Empirical Finding: Static rules suffer a severe decay on unseen phishing tactics \(46.8% acc\),) Tj ET
+BT /F1 10 Tf 0.10 0.10 0.10 rg 1 0 0 1 50 467 Tm (whereas the machine learning models generalize robustly to novel attack campaigns.) Tj ET
+BT /F1 10 Tf 0.10 0.10 0.10 rg 1 0 0 1 50 453 Tm (FR-05 Benign Urgent Messages: ML models achieved 0.0% FPR on legitimate password/payroll notices.) Tj ET
+BT /F2 12 Tf 0.10 0.20 0.45 rg 1 0 0 1 50 431 Tm (7 | Safety, Ethics & Limitations) Tj ET
+BT /F1 10 Tf 0.10 0.10 0.10 rg 1 0 0 1 50 415 Tm (NFR-01: Guaranteed inert URLs \(hxxp://, [.]\); no external socket connections or payload execution.) Tj ET
+BT /F1 10 Tf 0.10 0.10 0.10 rg 1 0 0 1 50 401 Tm (NFR-02: Zero real user credentials, PII, or corporate mailbox dumps; strictly synthetic tokens.) Tj ET
+BT /F1 10 Tf 0.10 0.10 0.10 rg 1 0 0 1 50 387 Tm (NFR-03: Mandatory educational decision-support disclaimer displayed on all outputs.) Tj ET
+BT /F2 12 Tf 0.10 0.20 0.45 rg 1 0 0 1 50 365 Tm (8 | Conclusion & Submission Artifacts) Tj ET
+BT /F1 10 Tf 0.10 0.10 0.10 rg 1 0 0 1 50 349 Tm (PhishShift successfully satisfies all functional \(FR-01 to FR-05\) and non-functional requirements.) Tj ET
+0.95 0.97 1.00 rg 50 309 495 38 re f
+BT /F1 9 Tf 0.15 0.20 0.30 rg 1 0 0 1 50 335 Tm (Submission Artifacts Package: final_report.pdf, SRS.pdf, README.md, requirements.txt,) Tj ET
+BT /F1 9 Tf 0.15 0.20 0.30 rg 1 0 0 1 50 322 Tm (run_all.py, app/server.py, src/, data/ \(corpus_manifest.json\), evidence/ \(all test logs\).) Tj ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 5 0 R /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> >>
+endobj
+xref
+0 12
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000000 00000 n 
+0000000127 00000 n 
+0000000197 00000 n 
+0000000272 00000 n 
+0000003956 00000 n 
+0000004092 00000 n 
+0000008380 00000 n 
+0000008516 00000 n 
+0000012804 00000 n 
+trailer
+<< /Size 12 /Root 1 0 R >>
+startxref
+12940
+%%EOF
